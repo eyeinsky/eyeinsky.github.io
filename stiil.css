@@ -1,0 +1,24 @@
+th {
+   padding: 0px;
+   }
+th input {
+   display: block;
+   width: 98%;
+   padding: 2px;
+   }
+td {
+   padding: 0px;
+   }
+tr {
+   }
+
+table {
+   border-collapse: collapse;
+   }
+tbody {
+   border: 1px solid black;
+   }
+#tagasiside, #tagasiside a {
+   font-size: small;
+   color: grey;
+   }
