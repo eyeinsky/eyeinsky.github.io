@@ -1,24 +1,68 @@
+
+/*
+punane: e20304
+tsentri lilla gradient: 623a92
+
+*/
+
+body {
+   background-color: #1a2960;
+   }
+#sisu {
+   width: 56em;
+   margin: auto auto; }
+h1 { 
+   color: white;
+   text-shadow: 4px 4px 4px black, 3px 3px 3px #623a92;
+   font-size: 4em;
+   }
+table {
+   width: 100%;
+   border-collapse: collapse;
+   background-color: #e20304;
+   table-layout: fixed;
+
+   border-top: 5px solid white;
+   border-bottom: 5px solid white;
+   color: white;
+   text-shadow: 1px 1px 1px darkgrey;
+   font-weight: bold;
+   box-shadow: -18px 18px 100px 18px #623a92;
+   }
+table a { color: white; }
+table a:visited, table a:hover { color: lightgrey; }
+
+tr {
+   border-left: 5px solid white;
+   border-right: 5px solid white;
+   }
 th {
    padding: 0px;
-   }
-th input {
-   display: block;
-   width: 98%;
-   padding: 2px;
-   }
-td {
-   padding: 0px;
-   }
-tr {
+   background-color: rgba(255,255,255,0.5); 
+   border: 1px dashed red;
    }
 
-table {
-   border-collapse: collapse;
+th input {
+   display: block;
+   width: 70%;
+   padding: 0 0 0 1em;
+   height: 2em;
+   border: 0;
+   background-color: transparent; 
+   font-weight: bold;
    }
-tbody {
-   border: 1px solid black;
+
+td {
+   padding: 0.2em 1em;
+   border: 1px dashed red;
+   }
+
+td:nth-child(1), th:nth-child(1) { width: 9em; }
+td:nth-child(2), th:nth-child(2) { width: 7em; }
+td:nth-child(4), th:nth-child(4) { width: 14em; }
+tr {
    }
 #tagasiside, #tagasiside a {
    font-size: small;
-   color: grey;
+   color: rgba(180,180,180,0.1);
    }
