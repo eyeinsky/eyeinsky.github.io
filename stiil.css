@@ -12,32 +12,35 @@ body {
    margin: 0;
    }
 #sisu {
-   width: 56em;
+   width: 46em;
    margin: auto auto; }
 h1 { 
    color: white;
    text-shadow: 4px 4px 4px black, 3px 3px 3px #623a92;
    font-size: 4em;
    }
-table {
+.saade {
+   margin: 2em 0 0 0;
    width: 100%;
-   border-collapse: collapse;
    background-color: #e20304;
-   table-layout: fixed;
-
-   border-top: 5px solid white;
-   border-bottom: 5px solid white;
+   border: 5px solid white;
    color: white;
    text-shadow: 1px 1px 1px darkgrey;
    font-weight: bold;
    box-shadow: -18px 18px 100px 18px #623a92;
    }
+.kuupäev {
+   padding: 0.6em 0 0.6em 1em; }
+table {
+   width: 100%;
+   table-layout: fixed;
+   border-collapse: collapse;
+   }
+
 table a { color: white; }
 table a:visited, table a:hover { color: lightgrey; }
 
 tr {
-   border-left: 5px solid white;
-   border-right: 5px solid white;
    }
 th {
    padding: 0px;
@@ -60,9 +63,9 @@ td {
    border: 1px dashed red;
    }
 
-td:nth-child(1), th:nth-child(1) { width: 9em; }
-td:nth-child(2), th:nth-child(2) { width: 7em; }
-td:nth-child(4), th:nth-child(4) { width: 14em; }
+/* td:nth-child(1), th:nth-child(1) { width: 9em; } */
+td:nth-child(1) { width: 5em; }
+td:nth-child(2) { width: 24em; }
 tr {
    }
 #tagasiside, #tagasiside a {
