@@ -39,4 +39,28 @@ function filt(e) {
       })
    }
 
-window.onload = function() { init("thead", 4) }
+function keri(n) {
+   this.click()
+   // $('html,body').animate({ scrollTop: $('#'+n).offset().top }), 'slow');
+   }
+
+
+window.onload = function() {
+   init("thead", 4)
+
+   b = false
+   n = $('#nrs')
+   $('h1').on('click', function(ev) {
+      if (b) {
+         console.log(1)
+         n.anim({ height: '0em' }); b = !b;
+         }
+      else {
+         console.log(2)
+         n.anim({ height: '6em' }); b = !b;
+         };
+      })
+  
+   
+   
+   }

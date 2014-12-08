@@ -13,28 +13,46 @@ body {
    }
 #sisu {
    width: 46em;
-   margin: auto auto; }
+   margin: auto auto;
+   }
 h1 { 
+   display: block;
    color: white;
    text-shadow: 4px 4px 4px black, 3px 3px 3px #623a92;
    font-size: 4em;
+   margin: 0.4em 0 0.2em 0.5em;
    }
 .saade {
    margin: 2em 0 0 0;
    width: 100%;
    background-color: #e20304;
    border: 5px solid white;
+   border-radius: 18px;
    color: white;
    text-shadow: 1px 1px 1px darkgrey;
    font-weight: bold;
    box-shadow: -18px 18px 100px 18px #623a92;
    }
+
+.saade.tbd {
+   background-color: rgba(26, 0, 47, 1);
+   color: white;
+   text-shadow: unset;
+   border: 2px dashed #FFF;
+   padding: 1em 0em;
+   text-align: center;
+   font-weight: normal;
+   font-size: 80%;
+   }
+
 .kuupäev {
    padding: 0.6em 0 0.6em 1em; }
+
 table {
    width: 100%;
    table-layout: fixed;
    border-collapse: collapse;
+   margin: 0 0 1em 0;
    }
 
 table a { color: white; }
@@ -71,4 +89,49 @@ tr {
 #tagasiside, #tagasiside a {
    font-size: small;
    color: rgba(0, 0, 0, 0.06);
+   }
+
+
+
+/* SISUKORD */
+
+
+#nrs {
+   /* position: fixed;
+   left: 0;
+   top: 0; width: 8em; 
+   padding-right: 0.1em;
+   height: 100%;
+   background-color: #e20304;
+   overflow-y: auto;
+   overflow-x: hidden;
+
+   */
+   height: 0em;
+   overflow: hidden;
+   }
+
+#nrs h2 { display: none;
+   font-size: 1.1em; margin: 0.2em; color: white; font-weight: normal; }
+#nrs .n {
+   float: left;
+   width: 1.4em;
+   height: 1.4em;
+   margin: 0.1em;
+   vertical-align: middle;
+   border-radius: 0.7em;
+   }
+#nrs a {
+   display: inline-block;
+   width: 100%; height: 100%;
+   font-size: 60%;
+   text-align: center;
+   color: red;
+   border-radius: 0.7em;
+   text-decoration:none;
+   transition: all 5s;
+   }
+#nrs a:hover {
+   text-shadow: 0 0 2px red,0 0 2px red,0 0 2px red,0 0 2px red;
+   transition: all 0.4s;
    }
