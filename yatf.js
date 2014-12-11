@@ -45,22 +45,27 @@ function keri(n) {
    }
 
 
+function scplay(fn, t) {
+   var url = 'https://soundcloud.com/puhatajamangida/' + fn + '#t=' + t
+   window.open(url)
+   }
+
 window.onload = function() {
-   init("thead", 4)
+   // init("thead", 4)
 
    b = false
    n = $('#nrs')
-   $('h1').on('click', function(ev) {
+   $('#nrs-nupp').on('click', function(ev) {
       if (b) {
-         console.log(1)
+         // console.log(1)
          n.anim({ height: '0em' }); b = !b;
          }
       else {
-         console.log(2)
+         // console.log(2)
          n.anim({ height: '6em' }); b = !b;
          };
       })
   
-   
+      
    
    }
