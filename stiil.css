@@ -63,7 +63,13 @@ h1:hover { text-shadow: 0 0 12px white,0 0 12px white,0 0 12px white,0 0 12px wh
    }
 
 .kuupäev {
-   padding: 0.6em 0 0.6em 1em; }
+   padding: 0.6em 0 0.6em 1em;
+   }
+.aeg { text-decoration: underline; }
+.aeg:hover {
+   color: lightgrey;
+   cursor: pointer;
+   }
 
 table {
    width: 100%;
@@ -73,7 +79,6 @@ table {
    }
 
 table a { color: white; }
-table a:visited, table a:hover { color: lightgrey; }
 
 tr {
    }
