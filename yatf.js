@@ -62,7 +62,7 @@ window.onload = function() {
          }
       else {
          // console.log(2)
-         n.anim({ height: '8em' }); b = !b;
+         n.anim({ height: '10em' }); b = !b;
          };
       })
   
