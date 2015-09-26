@@ -56,6 +56,7 @@ window.onload = function() {
    b = false
    n = $('#nrs')
    $('#nrs-nupp').on('click', function(ev) {
+      ev.preventDefault()
       if (b) {
          // console.log(1)
          n.anim({ height: '0em' }); b = !b;
