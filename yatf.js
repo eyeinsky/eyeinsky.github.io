@@ -63,7 +63,7 @@ window.onload = function() {
          }
       else {
          // console.log(2)
-         n.anim({ height: '10em' }); b = !b;
+         n.anim({ height: '12em' }); b = !b;
          };
       })
 
