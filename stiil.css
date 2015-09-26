@@ -8,7 +8,7 @@ tsentri lilla gradient: 623a92
 body {
    background-color: #1a2960;
    /* background-image: url(taust.png); */
-   padding: 0; 
+   padding: 0;
    margin: 0;
    }
 #sisu {
@@ -22,14 +22,14 @@ h1 {
    font-size: 4em;
    margin: 0.4em 0 0.2em 0.5em;
    }
-h1 #nrs-nupp:hover { 
+h1 #nrs-nupp:hover {
    color: rgba(255, 226, 226, 1);
    cursor: pointer;
    }
 
 #soundcloud {
    position: fixed;
-   width: 4em; height: 4em; 
+   width: 4em; height: 4em;
    top: 0; right: 0;
    color: white;
    }
@@ -84,7 +84,7 @@ tr {
    }
 th {
    padding: 0px;
-   background-color: rgba(255,255,255,0.5); 
+   background-color: rgba(255,255,255,0.5);
    border: 1px dashed red;
    }
 
@@ -94,7 +94,7 @@ th input {
    padding: 0 0 0 1em;
    height: 2em;
    border: 0;
-   background-color: transparent; 
+   background-color: transparent;
    font-weight: bold;
    }
 
@@ -121,7 +121,7 @@ tr {
 #nrs {
    /* position: fixed;
    left: 0;
-   top: 0; width: 8em; 
+   top: 0; width: 8em;
    padding-right: 0.1em;
    height: 100%;
    background-color: #e20304;

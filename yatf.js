@@ -14,9 +14,9 @@ function init(tbl, n) {
 
 
 function filt(e) {
-   
+
    filters = Array()
-   $('#filter th').map(function(item) { 
+   $('#filter th').map(function(item) {
       td = $(this)
       val = td.children('input').val()
       if (val.length > 0) {
@@ -35,7 +35,7 @@ function filt(e) {
          }, true)
 
       if (include) row.css('display','table-row')
-      else row.css('display', 'none')   
+      else row.css('display', 'none')
       })
    }
 
@@ -65,7 +65,7 @@ window.onload = function() {
          n.anim({ height: '10em' }); b = !b;
          };
       })
-  
-      
-   
+
+
+
    }
