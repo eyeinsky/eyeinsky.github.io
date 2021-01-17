@@ -1,0 +1,65 @@
+<html>
+    <meta charset="utf-8"/>
+    <head>
+        <style>
+         body {
+           background-image: url('img/taust.jpg');
+
+         }
+         h1 {
+           color: red;
+           background-color: blue;
+         }
+
+         #pealkirjad {
+           display: flex;
+           flex-flow: row nowrap;
+           width: 100vw;
+           justify-content: space-between;
+         }
+         #pealkirjad h2 {
+           margin: 1rem 2rem;
+           background-color: cyan;
+           padding: 1rem 4rem;
+           transition: 3s all;
+         }
+         #pealkirjad h2:hover {
+           padding: 2rem 16rem;
+           background-color: red;
+         }
+         .sisu { display: none; }
+        </style>
+
+        <script>
+         function näita(ev, mis) {
+           document.querySelectorAll('#sisud div').forEach(function(bla) {
+             bla.style.display = 'none';
+           })
+           document.querySelector(mis).style.display = 'block';
+         }
+        </script>
+
+    </head>
+    <body>
+
+        <a href='teine.html'>tEiNe</a>
+
+        <h1>Tsau, pealkiri :)</h1>
+        <p>
+            Mina olen üks suuuuuur
+            paragrahv
+        </p>
+        <div>
+            <div id=pealkirjad>
+                <h2 id=pk1 onclick='näita(event, "#sisu1")'>pealkiri1</h2>
+                <h2 id=pk2 onclick='näita(event, "#sisu2")'>pealkiri2</h2>
+                <h2 id=pk2 onclick='näita(event, "#sisu3")'>pealkiri3</h2>
+            </div>
+            <div id=sisud>
+                <div id=sisu1 class=sisu>sisu1 In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called greeking, which allows designers to consider the form of a webpage or publication, without the meaning of the text influencing the design. Lorem ipsum is typically a corrupted version of 'De finibus bonorum et malorum', a 1st century BC text by the Roman statesman and philosopher Cicero, with words altered, added, and removed to make it nonsensical and improper Latin. Versions of the Lorem ipsum text have been used in typesetting at least since the 1960s, when it was popularized by adverti</div>
+                <div id=sisu2 class=sisu>sisu2 In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called greeking, which allows designers to consider the form of a webpage or publication, without the meaning of the text influencing the design. Lorem ipsum is typically a corrupted version of 'De finibus bonorum et malorum', a 1st century BC text by the Roman statesman and philosopher Cicero, with words altered, added, and removed to make it nonsensical and improper Latin. Versions of the Lorem ipsum text have been used in typesetting at least since the 1960s, when it was popularized by adverti</div>
+                <div id=sisu3 class=sisu>sisu3 In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called greeking, which allows designers to consider the form of a webpage or publication, without the meaning of the text influencing the design. Lorem ipsum is typically a corrupted version of 'De finibus bonorum et malorum', a 1st century BC text by the Roman statesman and philosopher Cicero, with words altered, added, and removed to make it nonsensical and improper Latin. Versions of the Lorem ipsum text have been used in typesetting at least since the 1960s, when it was popularized by adverti</div>
+            </div>
+        </div>
+    </body>
+</html>
