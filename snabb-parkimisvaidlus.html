@@ -1,0 +1,2137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-03-18 Wed 14:04 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Snabb OÜ parkimisvaidlus</title>
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<style type="text/css">blockquote { border: 1px solid gray; padding: 1em; } .comment { color: green; } </style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Snabb OÜ parkimisvaidlus</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgea8809f">1. Esmane vaidlustus Snabbi kodulehel https://snabb.xyz/trahv <span class="timestamp-wrapper"><span class="timestamp">[2025-12-17 Wed]</span></span></a></li>
+<li><a href="#org9c187d5">2. Vaidlus Snabbi trahvihalduriga <span class="timestamp-wrapper"><span class="timestamp">[2025-12-19 Fri]&#x2013;[2025-12-22 Mon]</span></span></a></li>
+<li><a href="#orgb1f0247">3. Vaidlus Julianus Inkassoga <span class="timestamp-wrapper"><span class="timestamp">[2026-02-12 Thu]&#x2013;[2026-03-02 Mon]</span></span></a></li>
+<li><a href="#org092a058">4. Tagasiside Google Mapsis <span class="timestamp-wrapper"><span class="timestamp">[2026-03-02 Mon]&#x2013;[2026-03-03 Tue]</span></span></a></li>
+<li><a href="#orgeb70e1a">5. Redditi postitus <span class="timestamp-wrapper"><span class="timestamp">[2026-03-02 Mon]</span></span></a></li>
+<li><a href="#org0c4f7b3">6. Vaidlus nii Julius Inkasso kui Snabb infomeiliga <span class="timestamp-wrapper"><span class="timestamp">[2026-03-05 Thu]</span></span></a></li>
+<li><a href="#orgf1a3431">7. Tarbijakaitse ja Tehnilise Järelevalve Amet, Snabb OÜ ettevõtte liikmed <span class="timestamp-wrapper"><span class="timestamp">[2026-03-02 Mon]</span></span></a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgea8809f" class="outline-2">
+<h2 id="orgea8809f"><span class="section-number-2">1.</span> Esmane vaidlustus Snabbi kodulehel <a href="https://snabb.xyz/trahv">https://snabb.xyz/trahv</a> <span class="timestamp-wrapper"><span class="timestamp">[2025-12-17 Wed]</span></span></h2>
+<div class="outline-text-2" id="text-1">
+<p class="comment">
+Siin pakun esimest korda parkimise eest tagantjärgi tasumist:
+</p>
+
+<blockquote>
+<p>
+Tere,
+</p>
+
+<p>
+parkisin auto X102 tsoonis, saatsin ka parkimist alustava sõnumi,
+kuvatõmmis saadetud sõnumist kaasas. Paistab et süsteemi vea tõttu
+parkimist ei alustatud (ei osanud ka kinnitavat sõnumit ootama jääda,
+sest kunagi varem pole probleeme olnud).
+</p>
+
+<p>
+Olen ka varem (teise autoga, NNNNNN) tsoonis parkinud ja alati
+maksnud.
+</p>
+
+<p>
+Lahkusin parklast 14:10.
+</p>
+
+<p>
+Kas oleks võimalik trahvisumma vähendada sellele ajale mis ma parkisin
+(12:18-14:10)? (Tahtsin parkimise eest maksta, ja tõesti ei osanud
+arvata, et parkimine ei alanud. Proovin järgmine kord tähelepanelikum
+olla ja vastuse ära oodata).
+</p>
+
+
+<p>
+Aitäh
+</p>
+
+
+<p>
+[Kaasas kuvatõmmis, kus näha edukalt saadetud sõnum, kui ka igaks
+juhuks helistamine parkimise lõpetamiseks.]
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-org9c187d5" class="outline-2">
+<h2 id="org9c187d5"><span class="section-number-2">2.</span> Vaidlus Snabbi trahvihalduriga <span class="timestamp-wrapper"><span class="timestamp">[2025-12-19 Fri]&#x2013;[2025-12-22 Mon]</span></span></h2>
+<div class="outline-text-2" id="text-2">
+<blockquote>
+<p>
+from Snabb &lt;trahv@snabb.ee&gt; Fri, Dec 19, 2025, 5:05 PM to me
+</p>
+
+<p>
+Tere, YYYY!
+</p>
+
+<p>
+Oleme läbi vaadanud Teie vaide seoses leppetrahvi nõudega nr 785574.
+</p>
+
+<p>
+Parkimiskontrolli teostamisel ei tuvastatud sõidukil NNNNNN
+parkimisõigust, kuna parkimise alustamine ebaõnnestus. Sellest
+tulenevalt oli väljastatud leppetrahvi nõue. Makseviisid on nähtavad
+liiklusmärkidel ning lisateavet saab ka Snabb klienditoelt. Kui ühe
+makseviisiga ei õnnestu parkimise eest tasuda, palume kasutada teisi
+võimalusi, näiteks Snabb äpi.
+</p>
+
+<p>
+Kuna parkimine ei aktiveerunud, ei ole ka parkimise eest
+tasutud. Tuleme siiski vastu ja vähendame kõnealuse nõude summale 45
+eurot. Palume vähendatud summas leppetrahv tasuda 10 päeva jooksul
+meie iseteeninduses trahv.snabb.ee või leppetrahvil oleva
+maksekorralduse alusel.
+</p>
+
+<p>
+Edaspidi palume enne sõiduki juurest lahkumist veenduda, et Teie
+parkimine on aktiveeritud.
+</p>
+
+<p>
+Snabb
+</p>
+</blockquote>
+
+<p class="comment">
+Siin pakun teist korda parkimise eest tagantjärgi maksmist. Samuti
+Tele2 kõneeristuse ette küsimist (digiallkirjastatult, kui
+võimalik. Sest äkki on võltsitud, eks.). Neid asju Snabb OÜ mingil
+põhjusel ei soovi:
+</p>
+
+<blockquote>
+<p>
+from me Mon, Dec 22, 2025, 8:51 PM to Snabb
+</p>
+
+<p>
+Tervitus,
+</p>
+
+<p>
+aga miks ikkagi mina trahvi maksan kui teie süsteem ei tööta? Mina ju
+ei tea, kaua vastusega aega võib minna.
+</p>
+
+<p>
+Kuna ma ikkagi sooviks maksta täpselt pargitud aja eest, kuna mina
+omalt poolt sõnumi saatsin, siis kas teile sobib, et proovin Tele2-st
+kõneeristuse kätte saada ja teile saata? Varasemaid kõneeristusi
+vaadates paistab, et seal on ka 1902 numbrile naadetud sõnumid
+kirjas. Proovin neilt ka küsida, ehk saab seda dokumenti
+digiallkirjastatult &#x2013; siis võib ka kindel olla, et see dokument nende
+käest pärit on.
+</p>
+
+<p>
+Parimat,
+</p>
+</blockquote>
+
+<p class="comment">
+Siin üritab Snabb mind suunata Telia juurde. Teliaga minul mingisugust
+seost ei ole (Teliat parkimistingimustes nimetatud ei ole):
+</p>
+
+<blockquote>
+<p>
+from Snabb &lt;trahv@snabb.ee&gt; Tue, Dec 23, 2025, 10:23 AM to me
+</p>
+
+<p>
+Tere!
+</p>
+
+<p>
+SMS-parkimine on Telia teenus, küsimuste korral võite Telia poole
+pöörduda. Kui SMS-parkimisele kinnitust ei tule, ei ole parkimine
+aktiveeritud. Teie saadetud fotolt on näha, et olete varem korduvalt
+SMS-parkimist ka kasutanud, mistõttu olete teadlik, kuidas protsess
+toimub.
+</p>
+
+<p>
+Trahvi otsus on tehtud ning selles osas paraku enam muudatusi ei
+tehta. Telia oskab Teile öelda, mis põhjusel Teie SMS-parkimine
+ebaõnnestus.
+</p>
+
+<p>
+Best wishes Snabb OÜ Penalty Appeals Handler
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+from me Tue, Dec 23, 2025, 10:37 AM to Snabb
+</p>
+
+<p>
+Ei, mina ikka ei tea kuidas protsess toimub. Teie juhendis on kirjas,
+et tuleb saata SMS. Ei ole kirjas, et tuleb vastust oodata. Ma ei ole
+ka varem vastust ära oodanud, vastused on lihtsalt millalgi ise
+tulnud.
+</p>
+
+<p>
+Minul ei ole ka Teliaga mingisugust suhet, ainult teiega on. Kui Telia
+teile mingisugust vahendusteenust osutab ja see teenus ei toimi, siis
+nõudke ise Telialt raha välja. See on teie püsti pandud äri, tehke
+nii, et see töötab.
+</p>
+
+<p>
+Praegu siis paistab, et vaidleme edasi seda Tarbjakaitses?
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+from Snabb from Snabb &lt;trahv@snabb.ee&gt; Tue, Dec 23, 2025, 10:46 AM to
+me
+</p>
+
+<p>
+Tere!
+</p>
+
+<p>
+SMS-parkimine on Telia teenus - palume murede korral nende poole
+pöörduda. Snabb ei halda SMS-parkimist.
+</p>
+
+<p>
+Best wishes Snabb OÜ Penalty Appeals Handler
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+from me Tue, Dec 23, 2025, 11:08 AM to Snabb
+</p>
+
+<p>
+Parkimislepingu sõlmisin mina teiega, Teliaga minul mingisugust seost
+ei ole.
+</p>
+</blockquote>
+
+<p class="comment">
+Siin üritab Snabb OÜ justkui teha Teliast Parkimislepingus
+osaliseks. Parkimislepingus (infotahvlil) aga Teliat mainitud ei
+ole:
+</p>
+
+<blockquote>
+<p>
+from Snabb &lt;trahv@snabb.ee&gt; Tue, Dec 23, 2025, 11:10 AM to me
+</p>
+
+<p>
+Tere,
+</p>
+
+<p>
+kahjuks jääb arusaamatuks, kuidas saame Teid aidata. Te ei ole
+parkimise eest tasunud, sest tasumine läbi kolmanda osapoole teenuse
+ebaõnnestus.
+</p>
+
+<p>
+Best wishes
+</p>
+
+<p>
+Snabb OÜ Penalty Appeals Handler
+</p>
+</blockquote>
+
+<p class="comment">
+Siin pakun kolmandat korda parkimise eest tagantjärgi maksmist, Snabb
+OÜ jätkuvalt keeldub:
+</p>
+
+<blockquote>
+<p>
+from me Tue, Dec 23, 2025, 11:26 AM to Snabb
+</p>
+
+<p>
+Tegin ettepaneku maksta vaid parkimise eest, kuna mina sõnumi välja
+saatsin. Teie juhend ei ütle ei vastuse ära ootamise ega ka Telia
+seose kohta selles lepingus midagi.
+</p>
+
+<p>
+Kui teile ainult parkimise eest maksmine ei sobi, siis pole vast mõtet
+siin seda edasi arutada. Proovin mujalt abi saada, kui nad on teie
+seisukohaga nõus ja trahv jääb jõusse, maksan trahvi ilusti ära.
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+from Snabb &lt;trahv@snabb.ee&gt; Tue, Dec 23, 2025, 1:14 PM to me
+</p>
+
+<p>
+Tere!
+</p>
+
+<p>
+Kahjuks ei saa me Teie ettepanekuga nõustuda ning oleme Teile
+selgitanud otsuse asjaolusid.
+</p>
+
+<p>
+Kõik makseviisid on välja toodud parklas olevatel siltidel, abi saab
+vajadusel küsida meie klienditoelt ning Snabb ei halda
+SMS-parkimist. Jättes sõiduki parkimisalale ilma tasumata,
+väljastatakse sõidukile leppetrahv.
+</p>
+
+<p>
+Lisainfot SMS-parkimise kohta leiate siit:
+<a href="https://www.telia.ee/abi/teema/528/mobiil/lisateenused/juhend/1600/parkimise-alustamine-ja-parkimiseks-vajalikud-numbrid">https://www.telia.ee/abi/teema/528/mobiil/lisateenused/juhend/1600/parkimise-alustamine-ja-parkimiseks-vajalikud-numbrid</a>
+</p>
+
+<p>
+Best wishes Snabb OÜ Penalty Appeals Handler
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+from me Tue, Dec 23, 2025, 1:26 PM to Snabb
+</p>
+
+<p>
+Tervitus,
+</p>
+
+<p>
+ütlen siis uuesti: infotahvlil on kirjas, kellega ma lepingu sõlmin ja
+seal ei ole Teliast kirjas. Seega Telia ei ole parkimislepingus kolmas
+osapool vaid pigem teie lepingupartner (seda teate teie ise
+paremini). Kui Telia või keegi veel teie lepingupartner on, ning tema
+infosüsteem ei toimi, siis olge hea ja nõudge trahv hoopis sealt
+välja. Mina seda tegema ei hakka, sest Teliaga mul lepingut ei ole.
+</p>
+
+<p>
+Ma jätkuvalt soovin parkimise eest maksta, naljakas et teile see ei
+sobi. Miks mina pean maksma trahvi selle eest, et teie koostööpartneri
+süsteem ei toimi?
+</p>
+</blockquote>
+
+<p class="comment">
+Sellest kirjast jäi mulle esialgu segaseks, kas nad enam trahvi ei
+taha ("Oleme menetluse lõpetanud"), või lihtsalt märgivad nad
+käesoleva vaidluse lõppenuks:
+</p>
+
+<blockquote>
+<p>
+from Snabb &lt;trahv@snabb.ee&gt; Tue, Dec 23, 2025, 1:29 PM to me
+</p>
+
+<p>
+Tere!
+</p>
+
+<p>
+Trahvimenetlus niimoodi ei käi - trahvi eest vastutab siiski autot
+kasutanud isik või inkassofirma sekkumisel auto omanik/vastutav
+kasutaja.
+</p>
+
+<p>
+Oleme menetluse lõpetanud.
+</p>
+
+<p>
+Best wishes Snabb OÜ Penalty Appeals Handler
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+from me Tue, Dec 23, 2025, 1:32 PM to Snabb
+</p>
+
+<p>
+Samuti ei käi trahvimenetlus nii, et mina sõlmin lepingu teiega,
+täidan lepingu tingimusi, ja siis ikkagi maksan trahvi sest teie
+süsteem ei tööta.
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-orgb1f0247" class="outline-2">
+<h2 id="orgb1f0247"><span class="section-number-2">3.</span> Vaidlus Julianus Inkassoga <span class="timestamp-wrapper"><span class="timestamp">[2026-02-12 Thu]&#x2013;[2026-03-02 Mon]</span></span></h2>
+<div class="outline-text-2" id="text-3">
+<p class="comment">
+Poolteist kuud hiljem selgubki, et menetlus tegelikult jätkub:
+</p>
+
+<p>
+Julianus Inkasso (1) <span class="timestamp-wrapper"><span class="timestamp">[2026-02-12 Thu]</span></span>:
+</p>
+<blockquote>
+<p>
+Tere, YYYY
+</p>
+
+<p>
+Täname Teid kirja eest.
+</p>
+
+<p>
+Juhime Teie tähelepanu sellele, et oleme 11.02.2026 seisuga teavitanud
+isikut, kelle nimele oli esialgu nõue vormistatud. Meie tegeleme
+massnõuetega ning sellest kuupäevast alates on Teile ei veel edastatud
+automaatteavitus nõudest.
+</p>
+
+<p>
+Käesolevaga edastan Teile kirja, mille manuses leiate esitatud nõude
+alusdokumendid ja tasumise nõutav võlateatis PDF-failidena.
+</p>
+
+<p>
+Palume tasuda Snabb OÜ võlanõue summas 60,51 EUR hiljemalt 19.02.2026.
+Julianus Inkasso OÜ arvelduskontole EE147700771000526428,
+viitenumber 719203088.
+</p>
+
+<p>
+Pangalingiga tasumine:
+</p>
+
+<p>
+Tasuge oma võlanõue kiirelt ja mugavalt läbi iseteeninduse keskkonna.
+</p>
+
+<p>
+Iseteeninduses on makse tegemiseks vajalikud andmed juba
+eeltäidetud. Tasuda saate, kui olete Swedbank, SEB või LHV panga
+klient.
+</p>
+
+<p>
+Iseteeninduse kaudu tasumiseks vajutage SIIA:
+<a href="https://self.julianus.ee/ElIbd2">https://self.julianus.ee/ElIbd2</a>
+</p>
+
+<p>
+Soovi korral on Teil võimalik alati tutvuda oma võlgnevustega ning
+tasuda, kasutades meie iseteeninduse linki:
+<a href="https://self.julianus.ee/debts">https://self.julianus.ee/debts</a>
+</p>
+
+<p>
+Nõue on aktiivne ja menetlus on alustatud, on meil kohustus edastada
+Teile infot aktiivsete nõuete kohta.  Kahjuks ei peatu need teavitused
+enne, kui nõue on lõplikult tasutud.
+</p>
+
+<p>
+Jääme Teie makset ootama!
+</p>
+
+
+
+<p>
+Lugupidamisega
+</p>
+
+<p>
+XXXX Võlahaldur E-mail: meeldetuletus@julianus.ee Telefon: 6814456
+</p>
+</blockquote>
+
+<p class="comment">
+Allolevas kirjas saab Snabb OÜ/Julianus Inkasso esimest korda mu
+kõneeristus. Kuna Tele2 väljastab selle alles järgmisel kuul, siis
+detsembris Snabb OÜ trahvihalduriga suheldes mul seda ei olnud. Kuna
+(nagu eespool kirjas) nad seda ei nõudnud, ning kuna samuti jäi (minu
+jaoks) segaseks menetluse lõpetatus, siis ma kõneeristust Tele2-lt
+ette küsima ei hakanud:
+</p>
+
+<p>
+Mina (1) <span class="timestamp-wrapper"><span class="timestamp">[2026-02-13 Fri]</span></span>:
+</p>
+<blockquote>
+<p>
+Tervitus,
+</p>
+
+<p>
+Snabbi võlanõue tekkis tehnilise vea tõttu. Mina saatsin korrektselt
+vormistatud sõnumi, selle tõestuseks kaasas kuvatõmmis saadetud
+sõnumist ning Tele2 kõneeristus, kus on näha, et sõnum 17.12.2025
+12:18:41 saadeti. Mina soovisin parkimise eest maksta ning käitusin
+vastavalt Parkimislepingu juhistele (nii nagu ma seda alati teinud
+olen). Trahvi nõudeks alust pole, sest mina lepingutingimusi ei
+rikkunud.
+</p>
+
+<p>
+Samuti pakkusin Snabbi trahvihaldurile trahvi vähendamist summaks
+kasutatud parkimisele (umbes 8 eurot), sest ma tegelikult tahtsin
+parkimise eest maksta. Kõneeristuses on ka näha et ma igaks juhuks
+helistasin parkimise lõpetamise numbrile, sest mina ei teadnud, kas
+tehniline viga seisnes selles, et parkimine ei alanud või et info ei
+jõudnud parkimise kontrollijani.  Trahvi vähendamisega kasutatud
+parkimise suuruseks Snabb ei nõustunud vaid tahtis ikkagi trahvi
+(vähendades selle 55 eurolt 45 euro peale).
+</p>
+
+<p>
+Snabbi trahvihaldur selgitas veel, et nemad SMS parkimisega ei tegele,
+et sellega tegeleb Telia, viidates oletatavasti sellele, et ma võin
+trahvi Telialt välja nõuda. Kuna Parkimislepingus Telia kolmas osapool
+ei ole, siis puudub mul Telialt selle nõudmiseks alus. Parkimisleping
+Snabbiga sisaldab ainult seda, mis infotahvlil kirjas, tagantjärgi ei
+saa sinna Teliat lisada.
+</p>
+
+<p>
+Kirjavahetus Snabbi trahvihalduriga on selle kirjaga kaasas.
+</p>
+
+
+<p>
+Parimat,
+</p>
+
+
+<p>
+[ Kaasas failid:
+</p>
+<ul class="org-ul">
+<li>Tele2 kõneeristus, kus saadetud sõnum näha</li>
+<li>kirjavahetus Snabbiga (seesama, mis siin eespool)</li>
+<li>kuvatõmmis, kus näha edukalt saadetud sõnum, kui ka igaks juhuks
+helistamine parkimise lõpetamiseks ]</li>
+</ul>
+</blockquote>
+
+<p>
+Julianus Inkasso (2) <span class="timestamp-wrapper"><span class="timestamp">[2026-02-16 Mon]</span></span>:
+</p>
+<blockquote>
+<p>
+Tere YYYY Viitenumber 719203088
+</p>
+
+<p>
+Käesolevaga tuletame Teile meelde, et Teil on endiselt tasumata
+võlgnevus summas 60,56 EUR.  Nimetatud nõude kreeditor on Snabb OÜ ( )
+</p>
+
+<p>
+Aitame leida lahenduse, mis oleks sobilik nii Teile kui
+võlausaldajale.  Seetõttu soovime asja lahendada kohtuväliselt ning
+oleme valmis pakkuma Teile paindlikke võimalusi võlgnevuse
+tasumiseks. Juhul kui Teil ei ole võimalik tasuda võlgnevust korraga,
+saame kokku leppida Teile sobiva maksegraafiku.  Palun andke teada,
+millised on Teie võimalused võlgnevuse tasumiseks.
+</p>
+
+
+<p>
+Palume võlgnevus tasuda hiljemalt 23.02.2026, Julianus Inkasso OÜ
+arvelduskontole EE147700771000526428. Maksmisel palume märkida nõude
+viitenumber 719203088.
+</p>
+
+<p>
+Võimalusel tasuge oma võlanõue kiirelt ja mugavalt läbi iseteeninduse
+keskkonna.  Iseteeninduses on makse tegemiseks vajalikud andmed juba
+eeltäidetud.  E-inkasso kaudu tasumiseks vajutage SIIA:
+<a href="https://self.julianus.ee/uWkutQ">https://self.julianus.ee/uWkutQ</a>
+</p>
+
+
+<p>
+TEIE NÕUDE VIITENUMBER ON 719203088.
+</p>
+
+
+<p>
+Lugupidamisega, Julianus Inkasso OÜ E-mail: meeldetuletus@julianus.ee
+Telefon: 6814456
+</p>
+
+<p>
+Toompuiestee 35 10149 Tallinn
+</p>
+</blockquote>
+
+<p>
+Mina (2) <span class="timestamp-wrapper"><span class="timestamp">[2026-02-16 Mon]</span></span>:
+</p>
+<blockquote>
+<p>
+Tere,
+</p>
+
+<p>
+ma ei nõustu esitatud nõudega: see on alusetu, sest see tekkis
+tehnilise vea tõttu Snabbi maksesüsteemis.
+</p>
+
+<p>
+Saatsin teile pikema vastulause koos seda tõendavate dokumentidega 13.
+veebruaril. Esitan vastulause ja failid teile nüüd uuesti:
+</p>
+
+
+<p>
+Tervitus,
+</p>
+
+<p>
+Snabbi võlanõue tekkis tehnilise vea tõttu. Mina saatsin korrektselt
+vormistatud sõnumi, selle tõestuseks kaasas kuvatõmmis saadetud
+sõnumist ning Tele2 kõneeristus, kus on näha, et sõnum 17.12.2025
+12:18:41 saadeti. Mina soovisin parkimise eest maksta ning käitusin
+vastavalt Parkimislepingu juhistele (nii nagu ma seda alati teinud
+olen). Trahvi nõudeks alust pole, sest mina lepingutingimusi ei
+rikkunud.
+</p>
+
+<p>
+Samuti pakkusin Snabbi trahvihaldurile trahvi vähendamist summaks
+kasutatud parkimisele (umbes 8 eurot), sest ma tegelikult tahtsin
+parkimise eest maksta. Kõneeristuses on ka näha et ma igaks juhuks
+helistasin parkimise lõpetamise numbrile, sest mina ei teadnud, kas
+tehniline viga seisnes selles, et parkimine ei alanud või et info ei
+jõudnud parkimise kontrollijani.  Trahvi vähendamisega kasutatud
+parkimise suuruseks Snabb ei nõustunud vaid tahtis ikkagi trahvi
+(vähendades selle 55 eurolt 45 euro peale).
+</p>
+
+<p>
+Snabbi trahvihaldur selgitas veel, et nemad SMS parkimisega ei tegele,
+et sellega tegeleb Telia, viidates oletatavasti sellele, et ma võin
+trahvi Telialt välja nõuda. Kuna Parkimislepingus Telia kolmas osapool
+ei ole, siis puudub mul Telialt selle nõudmiseks alus. Parkimisleping
+Snabbiga sisaldab ainult seda, mis infotahvlil kirjas, tagantjärgi ei
+saa sinna Teliat lisada.
+</p>
+
+<p>
+Kirjavahetus Snabbi trahvihalduriga on selle kirjaga kaasas.
+</p>
+
+
+<p>
+Parimat,
+</p>
+
+
+<p>
+[ Kaasas failid:
+</p>
+<ul class="org-ul">
+<li>Tele2 kõneeristus, kus saadetud sõnum näha</li>
+<li>kirjavahetus Snabbiga (seesama, mis siin eespool)</li>
+<li>kuvatõmmis, kus näha edukalt saadetud sõnum, kui ka igaks juhuks
+helistamine parkimise lõpetamiseks ]</li>
+</ul>
+</blockquote>
+
+
+<p>
+Julianus Inkasso (3) <span class="timestamp-wrapper"><span class="timestamp">[2026-02-20 Fri]</span></span>:
+</p>
+<blockquote>
+<p>
+Korduv meeldetuletus
+</p>
+
+
+<p>
+YYYY Kirja kuupäev: 20.02.2026 Viitenumber: 719203088
+</p>
+
+<p>
+Julianus Inkasso OÜ tuletab meelde, et 2.02.2026 volitas Snabb OÜ
+Julianus Inkasso OÜ-d võlanõuet Teilt sisse nõudma. Seisuga 20.02.2026
+võlasumma 60,61 EUR tasumata.  Kõikide küsimuste ja ettepanekutega
+võla osas palume pöörduda Julianus Inkasso OÜ poole. Kõige lihtsam ja
+mugavam on seda teha läbi Iseteeninduse, kus saab soovi korral võla
+kohe tasuda või sõlmida maksekokkuleppe.
+</p>
+
+<p>
+Võlanõude alusdokumendid: Aluslepingud Leping nr: nr. NNNNNN Alusarved
+Tasumise tähtaeg: 1.01.2026 Arve nr: 785574 Võlanõude komponendid
+seisuga 20.02.2026 Põhisumma: Viivis 1 : Muud kulud: Sissenõudekulud
+2 : 45,00 EUR 0,61 EUR 0,00 EUR 15,00 EUR Kokku tasuda: 60,61 EUR Võla
+kogusumma 60,61 EUR palume tasuda hiljemalt 27.02.2026 Julianus
+Inkasso OÜ arvelduskontole nr EE147700771000526428, märkides tasumisel
+viitenumbri lahtrisse võlanõude viitenumbri 719203088. Makset on kõige
+mugavam teha läbi Iseteeninduse keskkonna, kus makse tegemiseks
+vajalikud andmed on juba eeltäidetud. Soovitame võla tasuda nii
+kiiresti, kui võimalik, sest iga viivitatud päeva eest olete
+kohustatud maksma viivitusintresse, mis suurendavad võlga
+veelgi. Täname Teid võla õigeaegse tasumise eest!
+</p>
+</blockquote>
+
+<p>
+Mina (3) <span class="timestamp-wrapper"><span class="timestamp">[2026-02-20 Fri]</span></span>:
+</p>
+<blockquote>
+<p>
+Tere,
+</p>
+
+<p>
+olen sellele nõudele vastuargumendi varem esitanud, aga saadan selle
+igaks juhuks veel.
+</p>
+
+<p>
+Lühidalt: ma ei nõustu esitatud nõudega: see on alusetu, sest see
+tekkis tehnilise vea tõttu Snabbi maksesüsteemis.
+</p>
+
+<p>
+Saatsin teile põhjaliku vastulause koos seda tõendavate
+dokumentidega 13. veebruaril. Esitan vastulause ja failid teile nüüd
+uuesti:
+</p>
+
+
+<p>
+Tervitus,
+</p>
+
+<p>
+Snabbi võlanõue tekkis tehnilise vea tõttu. Mina saatsin korrektselt
+vormistatud sõnumi, selle tõestuseks kaasas kuvatõmmis saadetud
+sõnumist ning Tele2 kõneeristus, kus on näha, et sõnum 17.12.2025
+12:18:41 saadeti. Mina soovisin parkimise eest maksta ning käitusin
+vastavalt Parkimislepingu juhistele (nii nagu ma seda alati teinud
+olen). Trahvi nõudeks alust pole, sest mina lepingutingimusi ei
+rikkunud.
+</p>
+
+<p>
+Samuti pakkusin Snabbi trahvihaldurile trahvi vähendamist summaks
+kasutatud parkimisele (umbes 8 eurot), sest ma tegelikult tahtsin
+parkimise eest maksta. Kõneeristuses on ka näha et ma igaks juhuks
+helistasin parkimise lõpetamise numbrile, sest mina ei teadnud, kas
+tehniline viga seisnes selles, et parkimine ei alanud või et info ei
+jõudnud parkimise kontrollijani.  Trahvi vähendamisega kasutatud
+parkimise suuruseks Snabb ei nõustunud vaid tahtis ikkagi trahvi
+(vähendades selle 55 eurolt 45 euro peale).
+</p>
+
+<p>
+Snabbi trahvihaldur selgitas veel, et nemad SMS parkimisega ei tegele,
+et sellega tegeleb Telia, viidates oletatavasti sellele, et ma võin
+trahvi Telialt välja nõuda. Kuna Parkimislepingus Telia kolmas osapool
+ei ole, siis puudub mul Telialt selle nõudmiseks alus. Parkimisleping
+Snabbiga sisaldab ainult seda, mis infotahvlil kirjas, tagantjärgi ei
+saa sinna Teliat lisada.
+</p>
+
+<p>
+Kirjavahetus Snabbi trahvihalduriga on selle kirjaga kaasas.
+</p>
+
+
+<p>
+Parimat,
+</p>
+
+
+<p>
+[ Kaasas failid:
+</p>
+<ul class="org-ul">
+<li>Tele2 kõneeristus, kus saadetud sõnum näha</li>
+<li>kirjavahetus Snabbiga (seesama, mis siin eespool)</li>
+<li>kuvatõmmis, kus näha edukalt saadetud sõnum, kui ka igaks juhuks
+helistamine parkimise lõpetamiseks ]</li>
+</ul>
+</blockquote>
+
+<p class="comment">
+Julianus Inkasso esitab uuesti Snabb OÜ seisukohta, et vastussõnum
+tuleb ära oodata ("üksnes kinnitussõnumi
+laekumisel"). Parkimislepingus (infotahvlil) seda kirjas ei
+ole.
+</p>
+
+<p class="comment">
+Huvitav kas selle mitte kirja panemine on tahtlik? Ma ei saa
+olla ju esimene inimene selles olukorras. Samuti, mitmes kohas
+internetis ju on (nagu sellest vaidlusest välja tuleb): Telial on,
+Tele2-l on. Aga Snabb OÜ oma infotahvlile ei kirjuta.
+</p>
+
+<p>
+Julianus Inkasso (4) <span class="timestamp-wrapper"><span class="timestamp">[2026-02-20 Fri]</span></span>:
+</p>
+<blockquote>
+<p>
+Lugupeetud YYYY Viitenumber: 719203088
+</p>
+
+<p>
+Anname teada, et oleme Teie varasemad vastuväited, mis esitasite Snabb
+OÜ-le vaidemenetluse käigus, inkassomenetluse raames uuesti läbi
+vaadanud ning edastanud võlausaldajale täiendavaks seisukohavõtuks.
+</p>
+
+<p>
+Võlausaldaja jääb oma varasema otsuse juurde.
+</p>
+
+<p>
+Snabbi parklates loetakse SMS-parkimine alanuks üksnes kinnitussõnumi
+laekumisel. Kinnituse puudumisel ei ole parkimine
+aktiveerunud. SMS-teenuse tehnilist lahendust haldab Telia Eesti AS
+ning Snabb OÜ-l puudub ligipääs ebaõnnestunud sõnumite logidele.
+</p>
+
+<p>
+Parkimistingimuste kohaselt on sõiduki kasutaja kohustatud veenduma,
+et parkimine on nõuetekohaselt alustatud ning tasumine õnnestunud. Kui
+valitud makseviis ei toimi, tuleb kasutada alternatiivset makseviisi.
+</p>
+
+<p>
+Võlausaldaja on varasema menetluse käigus vähendanud leppetrahvi
+summat 55 eurolt 45 euroni.
+</p>
+
+<p>
+Hetkeseisuga koosneb nõue järgmiselt:
+</p>
+
+<p>
+põhinõue (leppetrahv) – 45 €
+</p>
+
+<p>
+sissenõudmiskulu – 15 €
+</p>
+
+<p>
+viivis – 0,61 €
+</p>
+
+<p>
+Sissenõudmiskulu tuleneb Võlaõigusseadus § 113 lg 2.
+</p>
+
+<p>
+Kompromissina oleme valmis kokkuleppe sõlmimisel peatama viivise
+edasise arvestamise ning sissenõudmiskulu võimaliku suurenemise alates
+kokkuleppe saavutamisest, eeldusel et maksekokkuleppet täidetakse
+nõuetekohaselt.
+</p>
+
+<p>
+Palume teatada, kas soovite tasuda nõude ühekordselt või esitate
+ettepaneku osamaksete (summa ja tasumise kuupäev) osas.
+</p>
+
+
+<p>
+Heade soovidega
+</p>
+
+<p>
+XXXX Võlahaldur E-mail: meeldetuletus@julianus.ee Telefon: 6814456
+Julianus Inkasso OÜ Toompuiestee 35 10149 Tallinn
+</p>
+</blockquote>
+
+<p>
+Mina (4) <span class="timestamp-wrapper"><span class="timestamp">[2026-02-23 Mon]</span></span>:
+</p>
+<blockquote>
+<p>
+Tere,
+</p>
+
+<p>
+mul ei ole midagi uut lisada: lähtudes Parkimislepingust (pilt
+manuses) ja minu tõendatud tegevustest leian jätkuvalt, et trahv on
+alusetu.
+</p>
+
+<p>
+Ka inimlikult jääb mulle arusaamatuks, miks ei nõustu Snabb trahvi
+vähendamisega tarbitud parkimise suuruseks, sest tehniline viga, mis
+käesoleva olukorra tekitas, Snabbi maksesüsteemis ju ilmnes.
+</p>
+
+<p>
+Kui Julianus Inkasso ise teistsugusele järeldusele ei jõua, võib
+liikuda järgmise sammu juurde.
+</p>
+
+
+
+<p>
+Igaks juhuks saadan eelnevalt saadetud vastuväite uuesti:
+</p>
+
+
+<p>
+Tervitus,
+</p>
+
+<p>
+Snabbi võlanõue tekkis tehnilise vea tõttu. Mina saatsin korrektselt
+vormistatud sõnumi, selle tõestuseks kaasas kuvatõmmis saadetud
+sõnumist ning Tele2 kõneeristus, kus on näha, et sõnum 17.12.2025
+12:18:41 saadeti. Mina soovisin parkimise eest maksta ning käitusin
+vastavalt Parkimislepingu juhistele (nii nagu ma seda alati teinud
+olen). Trahvi nõudeks alust pole, sest mina lepingutingimusi ei
+rikkunud.
+</p>
+
+<p>
+Samuti pakkusin Snabbi trahvihaldurile trahvi vähendamist summaks
+kasutatud parkimisele (umbes 8 eurot), sest ma tegelikult tahtsin
+parkimise eest maksta. Kõneeristuses on ka näha et ma igaks juhuks
+helistasin parkimise lõpetamise numbrile, sest mina ei teadnud, kas
+tehniline viga seisnes selles, et parkimine ei alanud või et info ei
+jõudnud parkimise kontrollijani.  Trahvi vähendamisega kasutatud
+parkimise suuruseks Snabb ei nõustunud vaid tahtis ikkagi trahvi
+(vähendades selle 55 eurolt 45 euro peale).
+</p>
+
+<p>
+Snabbi trahvihaldur selgitas veel, et nemad SMS parkimisega ei tegele,
+et sellega tegeleb Telia, viidates oletatavasti sellele, et ma võin
+trahvi Telialt välja nõuda. Kuna Parkimislepingus Telia kolmas osapool
+ei ole, siis puudub mul Telialt selle nõudmiseks alus. Parkimisleping
+Snabbiga sisaldab ainult seda, mis infotahvlil kirjas, tagantjärgi ei
+saa sinna Teliat lisada.
+</p>
+
+<p>
+Kirjavahetus Snabbi trahvihalduriga on selle kirjaga kaasas.
+</p>
+
+
+<p>
+[ Kaasas failid:
+</p>
+<ul class="org-ul">
+<li>Tele2 kõneeristus, kus saadetud sõnum näha</li>
+<li>kirjavahetus Snabbiga (seesama, mis siin eespool)</li>
+<li>kuvatõmmis, kus näha edukalt saadetud sõnum, kui ka igaks juhuks
+helistamine parkimise lõpetamiseks</li>
+<li>pilt parkimislepingust ]</li>
+</ul>
+</blockquote>
+
+<p class="comment">
+Siin Julianus "mõistab inimlikult" minu seisukohta &#x2013; aga siiski pean
+maksma trahvi! Ehk siis mõistab &#x2013; aga ei mõista.
+</p>
+
+<p>
+Julianus Inkasso (5) <span class="timestamp-wrapper"><span class="timestamp">[2026-02-25 Wed]</span></span>:
+</p>
+<blockquote>
+<p>
+Tere, YYYY
+</p>
+
+<p>
+Täname Teid edastatud täiendava info, kuvatõmmiste ja kõneeristuse
+eest. Teie varasem kirjavahetus võlausaldajaga Snabb OÜ on meile
+teada.
+</p>
+
+<p>
+Teie edastatud kuvatõmmiselt nähtub, et SMS parkimise alustamiseks
+saadeti. Samas ei ole näha kinnitussõnumi laekumist. Samalt
+kuvatõmmiselt on aga näha, et varasematel kordadel olete SMS-parkimist
+kasutanud ning saanud kinnitussõnumi, mis tähendab, et olete teadlik,
+et parkimine loetakse alanuks üksnes kinnituse saamisel.
+</p>
+
+<p>
+Mõistame inimlikult Teie seisukohta ning asjaolu, et soovisite
+parkimise eest tasuda. Samas lasub parkimistingimuste kohaselt sõiduki
+kasutajal kohustus veenduda, et parkimine on edukalt aktiveeritud ning
+kinnitussõnum laekunud.
+</p>
+
+<p>
+Käesoleval juhul ei ole esitatud asjaolud andnud alust nõude
+tühistamiseks. Seetõttu jääb nõue kehtima ja kuulub tasumisele.
+</p>
+
+<p>
+Palume tasuda nõue esimesel võimalusel. Soovi korral on võimalik
+tasuda nõue osamaksetena.
+</p>
+
+<p>
+Heade soovidega
+</p>
+
+<p>
+XXXX Võlahaldur E-mail: meeldetuletus@julianus.ee Telefon: 6814456
+Julianus Inkasso OÜ Toompuiestee 35 10149 Tallinn
+</p>
+</blockquote>
+
+<p>
+Mina (5) <span class="timestamp-wrapper"><span class="timestamp">[2026-02-25 Wed]</span></span>:
+</p>
+<blockquote>
+<p>
+Tervitus,
+</p>
+
+<p>
+vastussõnumid on ka varem hilinenud, seetõttu ei ole ma neid ootama
+jäänud &#x2013; olen vastussõnumeid lugenud informatiivseteks. Ka ei sätesta
+Parkimisleping vastussõnumite rolli lepingu täitmisel.
+</p>
+
+<p>
+Olen seda küsimust Snabbiga juba arutanud (see kirjavahetus on teil
+olemas), aga ühisele arusaamisele ei ole jõudnud. Kuna Snabb ja teie,
+Julianus Inkasso, tema esindajana, olete huvitatud minu käest saama
+vähema raha asemel (= parkimise eest makstes) rohkem raha (= tehes
+trahvi), kuigi Parkimislepingut ma rikkunud ei ole ja kuigi tehniline
+viga ilmnes teie süsteemis, siis ma ei usu et me omavahel vaieldes
+kokkuleppele jõuame.
+</p>
+
+<p>
+Tehnilise vea süü veeretamine tarbja kaela laiem tagajärg on see, et
+Snabb ei teegi Parkimislepingut korda, ei paranda oma SMS-i süsteeme,
+ega paku ka trahvimenetlust/kasutajatuge, lubades tarbjal maksta
+parkimise eest tagantjärgi. Kasumlikum on teha inimesele trahvi.
+</p>
+</blockquote>
+
+<p class="comment">
+Siin läheb Julianus Inkasso seda teed, et mul justkui oleks
+parkimisleping Tele2-ga. Miks muidu peaksid mulle mõjuma parkimistingimused
+Tele2-e kodulehelt?
+</p>
+
+<p>
+Julianus Inkasso (6) <span class="timestamp-wrapper"><span class="timestamp">[2026-03-02 Mon]</span></span>:
+</p>
+<blockquote>
+<p>
+Tere, YYYY
+</p>
+
+<p>
+Täname Teid vastuse eest.
+</p>
+
+<p>
+Soovime juhtida Tähelepanu asjaolule, et SMS-parkimise kasutamise
+tingimused, sealhulgas kohustus oodata parkimise algust kinnitav
+sõnum, on avalikult kättesaadavad Tele2 kodulehel
+(<a href="https://tele2.ee/teenused/mugavusteenused/parkimine">https://tele2.ee/teenused/mugavusteenused/parkimine</a>), kus on sõnaselt
+kirjas:
+</p>
+
+<p>
+„Oota ära parkimise algust kinnitav sõnum ja veendu, et parkimist on
+alustatud.“
+</p>
+
+<p>
+Seega on kinnitussõnumi rolli parkimise aktiveerimise tõendamisel
+sätestanud SMS-parkimise teenuseosutaja ise. Asjaolu, et vastussõnumid
+on varasemalt hilinenud, ei vabasta sõiduki kasutajat kohustusest
+veenduda parkimise eduka aktiveerimise osas enne parkimise alustamist.
+</p>
+
+<p>
+Teie esitatud kuvatõmmis kinnitab, et SMS saadeti, kuid ei tõenda, et
+parkimine aktiveeriti, kinnitussõnum puudub. Varasemate kasutuskordade
+põhjal on Teil teada, et parkimine loetakse alanuks üksnes kinnituse
+saamisel.
+</p>
+
+<p>
+Esitatud asjaolud ei anna alust nõude tühistamiseks. Nõue jääb kehtima
+ja kuulub tasumisele.
+</p>
+
+<p>
+Palume tasuda nõue esimesel võimalusel. Soovi korral on võimalik kokku
+leppida osamaksete graafik.
+</p>
+
+<p>
+Heade soovidega
+</p>
+
+<p>
+XXXX Võlahaldur E-mail: meeldetuletus@julianus.ee Telefon: 6814456
+Julianus Inkasso OÜ Toompuiestee 35 10149 Tallinn
+</p>
+</blockquote>
+
+<p>
+Mina (6) <span class="timestamp-wrapper"><span class="timestamp">[2026-03-02 Mon]</span></span>:
+</p>
+<blockquote>
+<p>
+Tervitus,
+</p>
+
+<p>
+leppetrahv on ikkagi Parkimislepingu rikkumise eest, mille tingimused
+on kirjas infotahvlil, mitte mujal. Parkimisteenuse osutaja on Snabb,
+nagu infotahvlil kirjas, mitte Tele2 nagu te viimases kirjas osutate
+(ega ka Telia, nagu Snabb varem ütles).
+</p>
+
+<p>
+Vastussõnumite ära ootamise kohustust ei saa tagantjärele lepingusse
+lisada, küll aga tõestab kuvatõmmis seda, et ilmnes tehniline viga.
+</p>
+
+<p>
+Ma jätkuvalt ei nõustu leppetrahviga, kuna ma ei ole Parkimislepingut
+rikkunud.
+</p>
+
+<p>
+Inimlikult on jätkuvalt arusaamatu, miks ei nõustu Snabb parkimise
+eest maksmisega tagantjärele, kuna parkimise eest maksmine ebaõnnestus
+tehnilise vea tõttu. Seda võimalust pakkusin Snabb-ile ka
+trahvimenetluse käigus, Snabb sellest keeldus.
+</p>
+
+<p>
+Tehnilise vea tõttu tarbija trahvimise laiem tagajärg on see, et Snabb
+ei tee korda oma SMS-süsteeme, ei paranda Parkimislepingut, ega
+paranda ka kasutajatuge, kus võimaldataks tehnilise vea tõttu esitatud
+trahvi vähendada kasutatud parkimisteenuse suuruseks.
+</p>
+
+
+
+<p>
+Saadan oma esialgse vastuväite uuesti koos seda tõendavate failidega:
+</p>
+
+
+<p>
+Tervitus,
+</p>
+
+<p>
+Snabbi võlanõue tekkis tehnilise vea tõttu. Mina saatsin korrektselt
+vormistatud sõnumi, selle tõestuseks kaasas kuvatõmmis saadetud
+sõnumist ning Tele2 kõneeristus, kus on näha, et sõnum 17.12.2025
+12:18:41 saadeti. Mina soovisin parkimise eest maksta ning käitusin
+vastavalt Parkimislepingu juhistele (nii nagu ma seda alati teinud
+olen). Trahvi nõudeks alust pole, sest mina lepingutingimusi ei
+rikkunud.
+</p>
+
+<p>
+Samuti pakkusin Snabbi trahvihaldurile trahvi vähendamist summaks
+kasutatud parkimisele (umbes 8 eurot), sest ma tegelikult tahtsin
+parkimise eest maksta. Kõneeristuses on ka näha et ma igaks juhuks
+helistasin parkimise lõpetamise numbrile, sest mina ei teadnud, kas
+tehniline viga seisnes selles, et parkimine ei alanud või et info ei
+jõudnud parkimise kontrollijani.  Trahvi vähendamisega kasutatud
+parkimise suuruseks Snabb ei nõustunud vaid tahtis ikkagi trahvi
+(vähendades selle 55 eurolt 45 euro peale).
+</p>
+
+<p>
+Snabbi trahvihaldur selgitas veel, et nemad SMS parkimisega ei tegele,
+et sellega tegeleb Telia, viidates oletatavasti sellele, et ma võin
+trahvi Telialt välja nõuda. Kuna Parkimislepingus Telia kolmas osapool
+ei ole, siis puudub mul Telialt selle nõudmiseks alus. Parkimisleping
+Snabbiga sisaldab ainult seda, mis infotahvlil kirjas, tagantjärgi ei
+saa sinna Teliat lisada.
+</p>
+
+<p>
+Kirjavahetus Snabbi trahvihalduriga on selle kirjaga kaasas.
+</p>
+
+
+<p>
+[ Kaasas failid:
+</p>
+<ul class="org-ul">
+<li>Tele2 kõneeristus, kus saadetud sõnum näha</li>
+<li>kirjavahetus Snabbiga (seesama, mis siin eespool)</li>
+<li>kuvatõmmis, kus näha edukalt saadetud sõnum, kui ka igaks juhuks
+helistamine parkimise lõpetamiseks</li>
+<li>pilt parkimislepingust ]</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-org092a058" class="outline-2">
+<h2 id="org092a058"><span class="section-number-2">4.</span> Tagasiside Google Mapsis <span class="timestamp-wrapper"><span class="timestamp">[2026-03-02 Mon]&#x2013;[2026-03-03 Tue]</span></span></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Link: <a href="https://maps.app.goo.gl/Md2vEeMFMeaELDdR7">https://maps.app.goo.gl/Md2vEeMFMeaELDdR7</a>
+</p>
+
+<p>
+Mina:
+</p>
+<blockquote>
+<p>
+Parkisin selles parklas, saatsin sõnumi parkimise alustamiseks, kuid tehnilise rikke tõttu see kohale ei jõudnud. Vaidlustasin trahvi, kuid kokkuleppele ei jõudnud. Pakkusin korduvalt ka trahvi vähendamist parkimise suuruseks (= parkimise eest tagantjärgi maksmist), kuid sellest keelduti. Nüüd pean sama vaidlust Julianus Inkassoga.
+</p>
+
+<p>
+Ehk siis: sa kas maksad parkimise eest kui Snabbil süsteemid töötavad, või maksad trahvi, kui need ei tööta.
+</p>
+
+<p>
+Loomulikult motiveerib selliste trahvide maksmine Snabbi mitte midagi enda juures paremaks tegema.
+</p>
+
+<p>
+Ebameeldiv!
+</p>
+
+<p>
+Kirjutasin pikemalt ka Redditis, linki kahjuks Google ei luba lisada.
+</p>
+
+<p>
+Vastus Snabbi vastusele: Parkimisleping on minul sõlmitud Snabbiga. Kui Telia osutab teile SMS-i vahenduse teenust, siis palun saatke ka leppetrahv neile. Minu kõneeristus on teil olemas.
+</p>
+
+<p>
+Samuti pakkusin teile korduvalt tagantjärgi parkimise eest tasumist. Teie sellest keeldusite.
+</p>
+</blockquote>
+
+<p class="comment">
+Eelnevat on täiendatud peale Snabb OÜ allolevat vastust.
+</p>
+
+<p>
+Snabb <span class="timestamp-wrapper"><span class="timestamp">[2026-03-03 Tue]</span></span>:
+</p>
+<blockquote>
+<p>
+Tere, YYYYYY
+</p>
+
+<p>
+Väga kahju kuulda, et nii juhtus. SMS teenuse tehnilisi rikkeid saab kahjuks hallata ainult Telia, seega soovitame selliste küsimuste korral pöörduda otse nende poole.
+</p>
+
+<p>
+Leppetrahvi menetlemisel võetakse arvesse erinevaid asjaolusid. Leppetrahv ei asenda parkimistasu maksmist, vaid määratakse parkimislepingu rikkumise eest. See on sätestatud ka parkimistingimustes, millega juht nõustub Snabbi parklaid kasutades.
+</p>
+
+<p>
+Sarnaste olukordade vältimiseks palume enne parklast lahkumist veenduda, et SMS parkimine on edukalt aktiveeritud või kasutada parkimiseks Snabb äppi, mis on isegi mugavam.
+</p>
+
+<p>
+Parimat,
+Snabbi tiim
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-orgeb70e1a" class="outline-2">
+<h2 id="orgeb70e1a"><span class="section-number-2">5.</span> Redditi postitus <span class="timestamp-wrapper"><span class="timestamp">[2026-03-02 Mon]</span></span></h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Link: <a href="https://www.reddit.com/r/Eesti/comments/1riuk3a/parkimisettev%C3%B5tte_snabb_patoloogiline_huvi_sulle/">https://www.reddit.com/r/Eesti/comments/1riuk3a/parkimisettev%C3%B5tte_snabb_patoloogiline_huvi_sulle/</a>
+</p>
+
+<blockquote>
+<p>
+Pealkiri: Parkimisettevõtte Snabb patoloogiline huvi sulle trahvi teha
+</p>
+
+<p>
+Lühidalt: parkisin detsembris Snabbi parklas kesklinnas, maksin (st proovisin maksta) sõnumiga. Sõnum ei jõudnud tehnilise vea tõttu kohale, tagasi auto juurde tulles oli esiklaasil parkimiskviitung. Kõneeristuses on sõnum näha. Vaidlustasin trahvi, mille käigus muuhulgas pakkusin korduvalt parkimise eest tagantjärele maksta, aga sellest keelduti ning seda üritatakse kuni tänase päevani, hetkel läbi Julianus Inkasso.
+</p>
+
+<p>
+Snabbi vastuargument on, et oleksin pidanud vastusõnumi ära ootama. Kuna need sõnumid aga hilinevad, siis neid ära ootama ei ole jäänud, ja mingil hetkel nad alati on tulnud. Seekord siis mitte. Samuti: parkimistingimustes vastussõnumi ära ootamise kohta midagi öeldud ei ole.
+</p>
+
+<p>
+Minu jaoks on küsimus põhimõtteline: kui iga kord kui maksesüsteemis ilmneb viga ja see vormistatakse ümber trahviks (= "klient on süüdi"), siis ei ole Snabbil mitte mingisugust huvi parandada oma infosüsteeme, teha korda oma Parkimislepingut, või ka võimaldada tagantjärgi parkimise eest maksmist trahvimenetluse käigus, sest trahvi eest saab kordades rohkem raha (minu puhul 8 eurot vs 45 ehk siis 5-6x rohkem). Oluline on inimest lihtsalt nii kaua menetleda, kuni ta enam ei jõua/viitsi vastu vaielda.
+</p>
+
+<p>
+Isegi kui parkimistingimustes oleks kirjas, et pead ootama vastussõnum ära, siis kasutajasõbralik ettevõtte nõustuks tagantjärgi parkimise eest tasumisega, sest trahv tekkis ju tehnilise vea tõttu.
+</p>
+
+<p>
+Kui kellelgi on ideid, mida edasi teha või kuidas käituda, võib mulle siin või DM-is kirjutada.
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-org0c4f7b3" class="outline-2">
+<h2 id="org0c4f7b3"><span class="section-number-2">6.</span> Vaidlus nii Julius Inkasso kui Snabb infomeiliga <span class="timestamp-wrapper"><span class="timestamp">[2026-03-05 Thu]</span></span></h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Julius Inkasso:
+</p>
+<blockquote>
+<p>
+Lugupeetud YYYY
+</p>
+
+<p>
+Oleme Teie esitatud seisukohtadega teadlikud. Informeerime Teid, et võlausaldaja ning Julianus Inkasso OÜ on oma positsiooni selgitanud ning inkassomenetlus jätkub seni, kuni kogu võlgnevus on täielikult tasutud.
+</p>
+
+<p>
+Lugupidamisega
+</p>
+
+<p>
+XXXX
+Võlahaldur
+E-mail: meeldetuletus@julianus.ee
+Telefon: 6814456
+Julianus Inkasso OÜ
+Toompuiestee 35  10149 Tallinn
+</p>
+</blockquote>
+
+<p>
+Mina:
+</p>
+<blockquote>
+<p>
+Tervitus,
+</p>
+
+<p>
+(Panin ka Snabbi cc-sse, ehk saavad nad otse vastata.)
+</p>
+
+<p>
+Ka mina olen oma positsiooni selgitanud. Olukord tekkis tehnilise vea tõttu Snabbi maksemeetodis, aga mingil põhjusel peab selle eest klient trahvi maksma?
+</p>
+
+<p>
+Leppetrahv on Parkimislepingu rikkumise eest. Millis punkti ma Parkimislepingus rikkusin?
+</p>
+
+
+<p>
+Inimlikult on jätkuvalt arusaamatu, miks ei nõustu Snabb parkimise eest maksmisega tagantjärele, kuna parkimise eest maksmine ebaõnnestus tehnilise vea tõttu. Seda võimalust pakkusin ka Snabb-i trahvimenetluse käigus, ka sellest keelduti.
+</p>
+
+<p>
+Tehnilise vea tõttu tarbija trahvimise laiem tagajärg on see, et Snabb ei tee korda oma SMS-süsteeme, ei paranda Parkimislepingut, ega paranda ka kasutajatuge, kus võimaldataks tehnilise vea tõttu esitatud trahvi vähendada kasutatud parkimisteenuse suuruseks.
+</p>
+
+
+<p>
+Saadan oma esialgse vastuväite uuesti koos seda tõendavate failidega:
+</p>
+
+
+<p>
+Tervitus,
+</p>
+
+<p>
+Snabbi võlanõue tekkis tehnilise vea tõttu. Mina saatsin korrektselt vormistatud sõnumi, selle tõestuseks kaasas kuvatõmmis saadetud sõnumist ning Tele2 kõneeristus, kus on näha, et sõnum 17.12.2025 12:18:41 saadeti. Mina soovisin parkimise eest maksta ning käitusin vastavalt Parkimislepingu juhistele (nii nagu ma seda alati teinud olen). Trahvi nõudeks alust pole, sest mina lepingutingimusi ei rikkunud.
+</p>
+
+<p>
+Samuti pakkusin Snabbi trahvihaldurile trahvi vähendamist summaks kasutatud parkimisele (umbes 8 eurot), sest ma tegelikult tahtsin parkimise eest maksta. Kõneeristuses on ka näha et ma igaks juhuks helistasin parkimise lõpetamise numbrile, sest mina ei teadnud, kas tehniline viga seisnes selles, et parkimine ei alanud või et info ei jõudnud parkimise kontrollijani.  Trahvi vähendamisega kasutatud parkimise suuruseks Snabb ei nõustunud vaid tahtis ikkagi trahvi (vähendades selle 55 eurolt 45 euro peale).
+</p>
+
+<p>
+Snabbi trahvihaldur selgitas veel, et nemad SMS parkimisega ei tegele, et sellega tegeleb Telia, viidates oletatavasti sellele, et ma võin trahvi Telialt välja nõuda. Kuna Parkimislepingus Telia kolmas osapool ei ole, siis puudub mul Telialt selle nõudmiseks alus. Parkimisleping Snabbiga sisaldab ainult seda, mis infotahvlil kirjas, tagantjärgi ei saa sinna Teliat lisada.
+</p>
+
+<p>
+Kirjavahetus Snabbi trahvihalduriga on selle kirjaga kaasas.
+</p>
+
+<p>
+[ Kaasas failid:
+</p>
+<ul class="org-ul">
+<li>Tele2 kõneeristus, kus saadetud sõnum näha</li>
+<li>kirjavahetus Snabbiga (seesama, mis siin eespool)</li>
+<li>kuvatõmmis, kus näha edukalt saadetud sõnum, kui ka igaks juhuks
+helistamine parkimise lõpetamiseks</li>
+<li>pilt parkimislepingust ]</li>
+</ul>
+</blockquote>
+
+<p class="comment">
+Järgnevas kordab Snabb OÜ jälle, et SMS-parkimine on "Telia
+teenus". Samas parkimislepingus seost Teliaga nimetatud ei ole. Seega
+Parkimislepingu järgi on (minu arusaama kohaselt) kogu osutatud teenus
+Snabb OÜ oma.
+</p>
+
+<p class="comment">
+Telia kommentaarist selgub ka, et nende seisukohalt parkimine ei ole
+alustatud, kui vastussõnumit ei ole. Snabb OÜ aga oma teenusepakkuja
+sellist tingimust parkimislepingusse lisanud ei ole.
+</p>
+
+<p class="comment">
+Samuti tundub Telia viitavat, nagu oleks ekraanipilt võltsitud?
+Juhul kui selline tegevus on laialdane (Snabb OÜ-l võiks selline
+teadmine olemas olla), siis tuleks see "tootekjunuduses" kuidagi
+adresseerida: nt arvestada see parkimishinna sisse või hoopis
+SMS-maksemeetodist hoopis loobuda. Või lihtsaim, täiendada infotahvlit
+(Parkimislepingut).
+</p>
+
+<p>
+Snabb:
+</p>
+<blockquote>
+<p>
+Tere, YYYY!
+</p>
+
+<p>
+Selgitame Teile veel kord juhtunut.
+</p>
+
+<p>
+SMS-parkimine on Telia teenus. SMS-parkimist ei halda ega saa hallata Snabb. Snabbi parklates on SMS-parkimine üks võimalikest makseviisidest, kuid sellest hoolimata on tegemist Telia poolt pakutava teenusega. Kui Teie hinnangul on tekkinud süsteemi rike, tuleb selle teemaga pöörduda Telia ja/või oma mobiilioperaatori poole.
+</p>
+
+<p>
+Oleme Teie küsimuse osas pöördunud ka ise Telia poole, et uurida, miks Teie SMS-parkimine ei jõudnud süsteemi. Siin on Telia vastus:
+</p>
+
+<p>
+Vaadates NNNNNN parkimisi, on neid varem tehtud numbrilt YYYYYYYY, aga detsembris ei ole parkimise platvormi logides midagi, meieni ei ole see jõudnud. Vahel on pargitud ka numbrilt YYYYYYYY, aga sama asi – ei ole midagi. Uurisin ka võrgust, SMSC keskuses logid olemas, aga mingit sisenevat/ väljaminevat liiklust ei ole. Ma ei tea kuidas ekraanipilt on saadud või saadetud, nagu oleks kell 12:18 parkimise alustamise SMS saadetud, aga mee süsteemides ei ole sellest jälgegi. Ja seetõttu ütleme ka meie oma kommunikatsioonis, et parkimise alustamisel tuleb veenduda, et saad vastus SMSi et „123abc pargiti tsooni X123“ jne. Kui seda ei ole, ei saa eeldada, et parkimisega on kõik OK.
+</p>
+
+<p>
+Seega võtab Telia teema kokku sarnaselt meie varasematele selgitustele: parkimise alustamisel tuleb alati oodata kinnitussõnumit. Kui kinnitussõnumit ei saabu, tuleks pöörduda Telia (SMS-parkimise teenusepakkuja) või oma mobiilioperaatori poole.
+</p>
+
+<p>
+Meie saame vaid oletada, mis võis juhtuda, kuid kahjuks ei saa me seda kinnitada ega täpselt tuvastada. Võimalik, et 17.12 kuupäeval olid Teie mobiilinumbril M-parkimise maksed keelatud. Samuti on võimalik, et Teie mobiilioperaatoril esines võrguprobleem, mille tõttu SMS ei jõudnud teenusepakkujani. Kahjuks ei ole meil võimalik sellele küsimusele täpsemat vastust anda – täpne info saab olla vaid Teie mobiilioperaatoril.
+</p>
+
+<p>
+Küsimusele „millist punkti ma Parkimislepingus rikkusin?“ oleme juba varasemalt vastanud. Antud parklas kehtib parkimistasu maksmise kohustus ning Teie sõiduki puhul jäi parkimistasu tasumata. Paraku ei ole meil võimalik nõustuda parkimistasu tagantjärele tasumisega, kuna selles parklas ei ole tagantjärele tasumine ette nähtud. Leppetrahv ei asenda parkimistasu, vaid see määratakse parkimislepingu rikkumise eest. Oleme omaltpoolt trahvisummat vähendanud.
+</p>
+
+<p>
+Soovime rõhutada, et oleme antud teemat Teile varasemates kirjavahetustes põhjalikult selgitanud ning meil ei ole omalt poolt enam täiendavaid kommentaare lisada. Tänaseks päevaks on nõue edastatud sissenõudmiseks Julianus Inkassole. Palume Teil võlgnevus tasuda vastavalt inkassofirma edasistele juhistele.
+</p>
+
+<p>
+Best wishes
+</p>
+
+<p>
+ZZZZ
+</p>
+
+<p>
+Head of Enforcement
+</p>
+</blockquote>
+
+<p class="comment">
+Siin ma reageerin võltsimiskahtlusele. Ega mul tõestuseks muud peale
+füüsiliselt oma telefonist sõnumi näitamise pole, siis pakun seda.
+</p>
+
+<p>
+Mina:
+</p>
+<blockquote>
+<p>
+Tervitus,
+</p>
+
+<p>
+ka mina olen varem selgitanud, et Telia ei ole parkimislepingus osaline. Kui Telia osutab teile SMS-makselahenduse teenust, siis on teile kahju tekitanud Telia. Mina päris kindlasti ei lähe Telialt midagi küsima, sest minul Teliaga igasugune seos puudub.
+</p>
+
+<p>
+Lisaks kuvatõmmisele on teil olemas minu Tele2 kõneeristus. Kui te arvate, et ma võltsisin selle, siis olen nõus tulema teile kontorisse, Tele2 Iseteenindusse sisse logima ja detsembri eristuse uuesti alla tõmbama.
+</p>
+
+<p>
+Küsimusele „millist punkti ma Parkimislepingus rikkusin?“ ei ole jätkuvalt vastatud. Palun saatke järgmises kirjas parkimisleping ja osutage selles kuidagi, tingimusele (näiteks joonige alla), mida ma ei täitnud.
+</p>
+
+<p>
+Inimlikult on jätkuvalt mõistetamatu, miks maksan mina trahvi, kui te teie enda või teile teenust osutava Telia tehnilise vea tõttu parkimistasu ei saa. Samuti polnud te nõus kompromissettepanekuna parkimise eest tasumisega tagantjärele. Kompromissettepanek ongi lepinguväline tegevus, seda pole vaja parkimislepingus eraldi ette näha.
+</p>
+
+<p>
+Kõike eelnevat olen ka mina põhjalikult ja korduvalt selgitanud ning ka minul ei ole tegelikke täiendavaid kommentaare lisada. Soovitada võiks aga parkimislepingu täiendamist vastus-sõnumi ootamise kohustusega, SMS parkimise ära kaotamist või trahvimenetlusse tagantjärgi maksmise võimaluse lisamist.
+</p>
+</blockquote>
+
+<p>
+Snabb:
+</p>
+<blockquote>
+<p>
+Tere,
+</p>
+
+<p>
+nagu öeldud, oleme me Teile kõik info edastanud ning menetlus on sellega meie poolt lõpetatud. Lisan manusesse Ahtri parkla parkimistingimused, et saaksite parkimislepinguga täpsemalt tutvuda.
+</p>
+
+<p>
+Omaltpoolt sulgeme selle vestluse ning palume Teil edasine suhtlus suunata Julianus inkasso poole.
+</p>
+
+<p>
+Attachments icon	X102-Snabb-Tingimused-600x1000.pdf
+</p>
+</blockquote>
+
+<p>
+Mina:
+</p>
+<blockquote>
+<p>
+Tervitus,
+</p>
+
+<p>
+ka mina olen kõik info teile edastanud. Vastavalt Parkimislepingu tingimustele saatsin korrektselt vormistatud sõnumi õigele numbrile (failid kaasas).
+</p>
+
+<p>
+Te ei ole jätkuvalt osutanud, millist Parkimislepingu punkti ma rikkunud olen.
+</p>
+
+<p>
+Samuti on inimlikult mõistetamatu, miks ei nõustunud Snabb kompromissettepanekuga tasuda parkimise eest tagantjärele, kuigi on selge et maksesüsteemis ilmnes tehniline viga.
+</p>
+
+<p>
+Võltsimiskahtluse korral tulen teile nii kõneeristust kui korrektset vormistatud sõnumit näitama.
+</p>
+
+<p>
+[ Kaasas failid:
+</p>
+<ul class="org-ul">
+<li>Tele2 kõneeristus, kus saadetud sõnum näha</li>
+<li>pilt parkimislepingust ]</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-orgf1a3431" class="outline-2">
+<h2 id="orgf1a3431"><span class="section-number-2">7.</span> Tarbijakaitse ja Tehnilise Järelevalve Amet, Snabb OÜ ettevõtte liikmed <span class="timestamp-wrapper"><span class="timestamp">[2026-03-02 Mon]</span></span></h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Avaldus TTJA-sse:
+</p>
+<blockquote>
+<p>
+Alustasin parkimist 17.12.2025 12:18:41 SMS abil Snabbi parklas X102, aadressil Hobujaama 12, aga sõnum ei jõudnud kohale. Auto juurde tagasi tulles kell ~14:18 oli trahvikviitung pandud esiklaasile.
+</p>
+
+<p>
+Võlanõue tekkis tehnilise vea tõttu, sest saatsin numbrile 1902 korrektselt vormistatud sõnumi, kuvatõmmis ja Tele2 kõneeristus on selle avaldusega kaasas.
+</p>
+
+<p>
+Soovisin parkimise eest maksta ning käitusin vastavalt parkimislepingu juhistele, kuid maksemeetod ei toiminud. Snabb vaidles vastu, et tuleb oodata ära vastussõnum. Parkimislepingus aga vastussõnumit ootama ei kohusta.
+</p>
+
+<p>
+Pakkusin Snabbi trahvihaldurile korduvalt trahvi vähendamist kasutatud parkimise suuruseks summaks (umbes 8 eurot), sest soovisin nii autot parkides, kui ka hiljem trahvimenetluse käigus parkimise eest maksta. Snabb sellega nõus ei olnud, jäi enda juurde, et pean maksma leppetrahvi. Hetkel on Snabb volitanud end esindama Julianus Inkasso OÜ, kellga olen pidamas sedasama vaidlust.
+</p>
+
+<p>
+Kaasas olevas failis "Koondatud kirjavahetus" on Snabbi ja Julanus Inkassoga peetud kirjavahetus.
+</p>
+
+<p>
+Inimlikult ma ei mõista, miks ei ole Snabb nõus tagantjärgi parkimise eest tasumisega, kui ilmselgelt tehniline viga maksmisel esines. Samuti ei ole parkimistingimustes vastus-sõnumitest midagi kirjas, seega pole ma rikkunud ka parkimistingimusi. Veel ei mõista ma, miks Snabbi trahvihaldur ütleb, et SMS parkimise teenust osutab Telia, küll aga nõuab leppetrahvi maksmist minult Snabbile. Mina ei saa ju Telialt hiljem seda raha uuesti välja nõuda, kuna Parkimisleping on mul ainult Snabbiga.
+</p>
+
+<p>
+[ Kaasas failid:
+</p>
+<ul class="org-ul">
+<li>pilt parkimislepingust</li>
+<li>Snabb trahvihalduriga kirjavahetus</li>
+<li>Koondkirjavahetus Snabb OÜ ja Julianus Inkasso OÜ-ga (kogu eelnev tekst pmst)</li>
+<li>Tele2 kõneeristus, kus saadetud sõnum näha</li>
+<li>pilt leppetrahvist</li>
+<li>Kuvatõmmis korrektselt vormistatud sõnumist ]</li>
+</ul>
+</blockquote>
+
+<p class="comment">
+Allolevas vastuses hakkab paistma esimene valgusekiir: nimelt võin ma
+nüüd maksta ainult parkimise eest (sama, mida neile kolm kuud tagasi
+pakkusin), aga tuleb eemaldada Google Mapsi ja Redditisse kirjutatud
+tagasiside:
+</p>
+
+
+<p>
+Snabb <span class="timestamp-wrapper"><span class="timestamp">[2026-03-12 Thu]</span></span>:
+</p>
+<blockquote>
+<p>
+Tere!
+</p>
+
+<p>
+Oleme tänaseks suhelnud antud teemal ka Teliaga, kes haldab
+SMS-parkimist. Nende sõnul ei ole 17.12.2025 kuupäeval olnud
+SMS-parkimise süsteemis rikkeid. Küll aga, peale teiste
+koostööpartneritega suhtlemist, on ilmnenud asjaolu, et 17.12
+kuupäeval oli rike hoopis Tele2 ehk Tarbija enda mobiilioperaatori
+süsteemis, mistõttu ei toiminud lühiajaliselt Tele2 võrgust
+väljaminevad kõned ja sõnumid. Seetõttu ei ole Tarbija poolt saadetud
+SMS-parkimise päring läbi läinud, mistõttu ei ole parkimine
+aktiveerunud, mille tagajärjel omakorda väljastati leppetrahv.
+</p>
+
+<p>
+Antud juhul ei võta Snabb vastutust tekkinud olukorra üle, sest
+tekkinud rike on kolmanda osapoole süsteemis, mitte Snabbi ega Snabbi
+koostööpartneri Telia süsteemis. Sellest olenemata, võttes arvesse
+uusi ilmnenud asjaolusid, oleme nõus lahendama olukorra järgmiselt ja
+teeme sellega Tarbijale pakkumuse:
+</p>
+
+<ol class="org-ol">
+<li>Vähendame leppetrahvi summa maksmata jäänud parkimistasule ning
+Tarbija tasub selle alloleva kalkulatsiooni ja maksekorralduse
+alusel.</li>
+
+<li>Makse laekumise järgselt lõpetab Snabb OÜ koostöös Julianus Inkasso
+OÜ-ga võla sissenõudmise ilma Tarbijale lisakulusid tekitamata. Kui
+Tarbijale on märgitud inkassofirma poolt külge maksehäired, ka need
+kustutatakse.</li>
+
+<li>Palume Tarbijal kustutada avalikult postitatud negatiivne
+tagasiside Google Maps'is asukoha "X102 Snabb parkla" küljest ning
+postitus platvormilt Reddit antud olukorra kohta (kuvatõmmised
+manuses), sest nagu eelnevalt seletatud, ei ole tekkinud olukord
+Snabbi ega Snabbi koostööpartnerite süsteemirikete, vaid Tarbija
+enda mobiilioperaatori rikke tõttu.</li>
+</ol>
+
+
+<p>
+Parkimistasu kalkulatsioon:
+</p>
+
+<p>
+Parklas on numbrituvastuse kaamerad, mille logide kohaselt on sõiduk
+956TFP sisenenud parklasse 17.12 kell 12:17 ning väljunud 14:03.
+</p>
+
+<p>
+Pargitud aeg 1h 46 minutit.
+</p>
+
+<p>
+Parkimistasu arvestus on 30 minuti sammuga, kus iga alustatud 30
+minuti samm on 1,90€.
+</p>
+
+<p>
+1,90€ x 4 alustatud 30-minutilist perioodi = 7,60€
+</p>
+
+
+<p>
+Maksekorraldus:
+</p>
+
+<p>
+Makse saaja: SNABB OÜ
+</p>
+
+<p>
+Saaja konto nr (IBAN): EE537700771009117210
+</p>
+
+<p>
+Saaja pank: AS LHV Pank, BIC/SWIFT: LHVBEE22
+</p>
+
+<p>
+Summa: 7,60€
+</p>
+
+<p>
+Selgitus: 785574
+</p>
+
+<p>
+Viitenumber: 785574
+</p>
+
+<p>
+NB! Viitenumbri lisamine on makse korrektseks töötlemiseks vajalik!
+Vale või ilma viitenumbrita maksed tühistatakse panga poolt.
+</p>
+
+<p>
+Peale makse teostamist palume Tarbijal meid sellest teavitada läbi
+TTJA e-teeninduse portaali või emailil info@snabb.ee. Seejärel
+kontrollitakse laekumine raamatupidamisest ning siis lõpetatakse
+inkassomenetlus ilma Tarbijale kaasnevate kuludeta. Kõikvõimalikud
+maksehäired, mis võivad olla rakendunud sissenõudmise käigus,
+kustutatakse.
+</p>
+
+<p>
+Tarbija kustutab 10 päeva jooksul peale menetluse lõpetamist
+eelmainitud tagasiside ja postituse Google Maps ja Reddit
+platvormidelt.
+</p>
+
+<p>
+Kui Tarbija ei nõustu meiepoolse pakkumusega, palume sellest meid
+teavitada.
+</p>
+
+<p>
+[ Kaasas kuvatõmmised tagasisidest:
+</p>
+<ul class="org-ul">
+<li>Reddit: <a href="https://www.reddit.com/r/Eesti/comments/1riuk3a/parkimisettev%C3%B5tte_snabb_patoloogiline_huvi_sulle/">https://www.reddit.com/r/Eesti/comments/1riuk3a/parkimisettev%C3%B5tte_snabb_patoloogiline_huvi_sulle/</a></li>
+<li>Google Maps: <a href="https://maps.app.goo.gl/zHVHYvjNWxqbAeKr8">https://maps.app.goo.gl/zHVHYvjNWxqbAeKr8</a> ]</li>
+</ul>
+</blockquote>
+
+<p>
+Mina <span class="timestamp-wrapper"><span class="timestamp">[2026-03-16 Mon]</span></span>:
+</p>
+<blockquote>
+<p>
+Tervitus,
+</p>
+
+<p>
+olen tänaseks suhelnud Tele2-ga, kes aga ei ole kinnitanud
+tehnilisteste probleemide olemasolu. Seega siin on sõna sõna vastu.
+</p>
+
+<p>
+Samas, Snabb OÜ on ettevõte kes pakub parkimisteenust, mille osa on
+teenuse eest digitaalne tasumine. Tehnilised vead selles on paratamatu
+äririsk. Tarbija ei ole võimeline teadma kõikidest tehnilistest
+detailidest ja osapooltest, kes protsessis osalevad, veel vähem
+võimeline veenduma Telia, Tele2 või kellegi kolmanda IT-süsteemide
+töökorras. Minul eraisiku ja tarbijana ei ole "koostööpartnereid", kes
+neid inspekteerimas käiks.
+</p>
+
+<p>
+Normaalne on, et ettevõte arvestab IT-mittetoimimise riskid teenuse
+hinna sisse. Ei ole normaalne, et ettevõtte eeldab tarbijalt ligipääsu
+telekommunikatsiooniettevõtete köögipoolele. (Samuti ei ole normaalne,
+et ettevõte saadab nõude inkassosse enne, kui ise juhtunut uurib.)
+</p>
+
+<p>
+Ettevõte ja tarbija ei ole võrdses seisundis osapooled. On
+ebaproportsionaalne eeldada tarbijalt sõnumi saatmise tõendamiseks
+enamat kui mobiilioperaatori kõneeristus. Kuvatõmmise kui ka
+kõneerstusega tõendatult mina korrektselt vormistatud sõnumi parkimise
+alustamiseks saatsin ning parkimislepingut rikkunud ei ole.
+</p>
+
+
+<p>
+Tagasiside kohta[1,2]. Tehnilised rikked on paratamatud. Küsimus on
+selles, kuidas ettevõte käitub juhtunule järgnevalt &#x2013; sellel
+vastavalt on ka tagasiside. Kui Snabb OÜ äripraktika on selline, et
+tehnilised vead pööratakse tarbija vastu leppetrahvideks, ning neid
+jõustatakse ilma neisse süvenemata läbi inkassoettevõtte, siis
+negatiivne tagasiside ei saa tulla üllatusena.
+</p>
+
+<p>
+Kui Snabb OÜ aga soovib oma äripraktikaid varjata, taodeldes
+tagasiside kustutamist, siis minu soovitus oleks osutada sellist
+teenust, mille sisu ei olekski põhjust varjata.
+</p>
+
+<p>
+Samuti soovitaks tungivalt Snabb OÜ-l mitte edastada inkassole nõudeid
+pimesi, mille õiguspärasus pole eelnevalt veendutud. Spekuleerimine
+asjaolul et "äkki tarbija maksab hirmust inkassoettevõtte ees trahvi
+ära" ei ole ei hea tava ega õiglane tarbija suhtes.
+</p>
+
+
+<p>
+Kuna tänaseks on Snabb OÜ ja teda esindav Julianus Inkasso OÜ mind
+solgutanud umbes kolm kuud, siis seda arvesse võttes ei soovi ma mitte
+midagi muud kui nõudest loobumist. Saada 7,60 parkimistasu tagantärgi
+oli Snabb OÜ-l 22. detsembril 2025. Esitada sama pakkumist uuesti,
+peale kolme kuud, menetlemist inkassos, tehnilise vea tuvastam (alles
+peale inkassot!), ettevõtte-tarbija rollide vahet mitte mõistes,
+tundub ebaadekvaatne.
+</p>
+
+<p>
+Tagasiside on antud vastavalt sellele, milline teenus oli (faktilised
+vead olen loomulikult nõus parandama). Kui Snabb OÜ leiab, et esitatud
+tagasiside on ebaõiglane, siis on nendel samadel platvormidel võimalik
+tagasisidele vastata. Nii saavad tarbijad iseseisvalt teenusepakkuja
+kohta arvamuse kujundada.
+</p>
+
+
+<p>
+[1] Tagasiside Google Mapsis: <a href="https://maps.app.goo.gl/Md2vEeMFMeaELDdR7">https://maps.app.goo.gl/Md2vEeMFMeaELDdR7</a>
+</p>
+
+<p>
+[2] Tagasiside Redditis: <a href="https://www.reddit.com/r/Eesti/comments/1riuk3a/parkimisettev%C3%B5tte_snabb_patoloogiline_huvi_sulle/">https://www.reddit.com/r/Eesti/comments/1riuk3a/parkimisettev%C3%B5tte_snabb_patoloogiline_huvi_sulle/</a>
+</p>
+</blockquote>
+
+<p class="comment">
+Saatsin ülal oleva teksti (lühikese sissejuhatusega) snabbx.xyz kodulehelt leitud e-posti
+aadressidele "parkimise ärisuuna juht", "partnersuhete juht",
+"ärijuht", "tegevjuht", "tehnoloogiajuht", "tootejuht" &#x2013; kõigile, kel
+võiks äri ajamise viisis mingisugust rolli olla.
+</p>
+
+<p>
+Mina <span class="timestamp-wrapper"><span class="timestamp">[2026-03-16 Mon]</span></span>:
+</p>
+<blockquote>
+<p>
+Tervitus,
+</p>
+
+<p>
+olen Snabb OÜ-ga TTJA-s vaidlemas. Mu juhtum on selline:
+</p>
+<ul class="org-ul">
+<li>parkisin, aga SMS ei läinud läbi</li>
+<li>vaidlustasin, aga vaidlustuse sisu ei uuritud, nõue saadeti inkassosse</li>
+<li>vaidlesin inkassoga mõnda aega</li>
+<li>hetkel TTJA-s
+<ul class="org-ul">
+<li>viimane Snabb OÜ seisukoht on, et Telia (ja koostööpartnerid)
+käisid serverilogisid uurimas ja leidsid, et Snabb OÜ pole süüdi,
+vaid Tele2 pillas sõnumi maha</li>
+<li>ettepanek: ma maksku parkimise eest tagantjärgi ja võtku ka
+internetti kirjutatud tagasisided maha</li>
+</ul></li>
+</ul>
+
+<p>
+Kõik see tundub tarbija seisukohalt jabur. Ma suudan vaielda, aga
+enamus inimesi ilmselt mitte. On see tõesti teie arvates normaalne äri
+ajamise viis, et te esialgu midagi ei uuri vaid nõue läheb inkassosse,
+ja alles siis, kui ka sealt raha ei saa, siis saab trahvi asemel
+uuesti parkimise eest maksta?
+</p>
+
+<p>
+Samuti, kui te sellist äri ajate, siis ei tohiks olla ju ka vajadust
+tagasisidet, mis seda kirjeldab, varjata?
+</p>
+
+
+<p>
+Mu viimane vastus TTJA-s:
+</p>
+
+<p>
+[ Seesama eelnev TTJA kaudu esitatud vastus. ]
+</p>
+</blockquote>
+
+<p>
+Snabb <span class="timestamp-wrapper"><span class="timestamp">[2026-03-16 Mon]</span></span>:
+</p>
+<blockquote>
+<p>
+Tere, YYYY!
+</p>
+
+<p>
+Uurisin Teie juhtumit ja kõigepealt möönan, et tegemist on olnud väga kahetsusväärse olukorraga ning mul on kahju, et sellisesse olukorda sattusite!
+</p>
+
+<p>
+Tühistame trahvi, kutsume inkassost tagasi ning ei oota Teilt parkimistasu tasumist tagasiulatuvalt (ega ka Teie antud tagasiside kustutamist eeltoodud meediumitest)
+</p>
+
+<p>
+Andsin vastava info meie vaidementlejatele. Kuigi tehniliselt oli süüdi Tele2 makselahendus, peame lähtuma kliendi positsioonist. Kuna Teie üritasite parkimist alustada ja olite heade kavatsustega, ei oleks pidanud leppetrahv inkassosse minema.
+</p>
+
+<p>
+Minu poolt siiras vabandus ning Snabb astub vajalikud sammud, et edaspidi selliseid olukordi vältida.
+</p>
+
+<p>
+Tervitan!
+</p>
+
+
+<p>
+XXXX
+www.snabb.ee
+</p>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2026-03-18 Wed 14:04</p>
+</div>
+</body>
+</html>
